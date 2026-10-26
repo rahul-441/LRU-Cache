@@ -1,0 +1,6 @@
+output/
+*.exe
+*.obj
+*.o
+*.pdb
+.vscode/
