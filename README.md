@@ -3,7 +3,7 @@
 A C++17 LRU cache with O(1) `get` and `put`, written as a template, with a thread-safe version and a sharded version. Benchmarked to show the cost of lock contention.
 
 ## Design
-- `list<pair<K,V>>` keeps usage order (front = most recent)
+- `list<pair<K ,V >>` keeps usage order (front = most recent)
 - `unordered_map<K, list::iterator>` gives O(1) lookup straight to a node
 - `list::splice` moves a node to the front in O(1) with no copy, and iterators stay valid
 - `get` returns `optional<V>`
