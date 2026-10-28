@@ -128,10 +128,10 @@ int main() {
 
   runBench(THREADS, TOTAL_OPS, 1);  // warm-up
 
-  cout << "Shards | Median ms (8 threads)\n";
+  cout << "Shards | Median ms (8 threads)" << endl;
   for (int s : shardCounts) {
     vector<double> times;
     for (int r = 0; r < RUNS; r++) times.push_back(runBench(THREADS, TOTAL_OPS, s));
-    cout << "  " << s << "    | " << median(times) << "\n";
+    cout << "  " << s << "    | " << median(times) << endl;
   }
 }
